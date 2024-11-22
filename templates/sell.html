@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Energy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sell Energy</h1>
+        <form method="POST">
+            <input type="number" name="units" placeholder="Units Available" step="0.01" required>
+            <input type="number" name="price_per_unit" placeholder="Price Per Unit" step="0.01" required>
+            <input type="text" name="esp32_ip" placeholder="ESP32 IP Address" required>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <a href="{{ url_for('dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+    </div>
+</body>
+</html>

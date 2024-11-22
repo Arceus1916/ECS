@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Energy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Buy Energy</h1>
+        <form method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seller</th>
+                        <th>Units Available</th>
+                        <th>Price Per Unit</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for listing in listings %}
+                    <tr>
+                        <td>{{ listing.user_id }}</td>
+                        <td>{{ listing.units }}</td>
+                        <td>{{ listing.price_per_unit }}</td>
+                        <td><input type="radio" name="seller_id" value="{{ listing.id }}" required></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <input type="text" name="buyer_ip" placeholder="Your ESP32 IP Address" required>
+            <button type="submit" class="btn">Proceed to Transfer</button>
+        </form>
+        <a href="{{ url_for('dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+    </div>
+</body>
+</html>
