@@ -114,7 +114,8 @@ def transfer():
         elif action == 'stop':
             stop_time = time.time()
             active_time = stop_time - session['start_time']
-            final_price = session['price_per_unit'] * active_time * 0.002778
+            active_time = round(active_time, 2)  # Round to 2 decimal places
+            final_price = round(session['price_per_unit'] * active_time * 0.002778, 2)
             seller = Listing.query.filter_by(id=session['seller_id']).first()
             seller.units -= active_time * 0.002778
             if seller.units <= 0:

@@ -1,0 +1,119 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fffbea, #d4edda, #ffffe0);
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Inputs and Buttons */
+form input, form button {
+    width: 90%;
+    padding: 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    display: block;
+}
+
+form button {
+    background: linear-gradient(to right, #28a745, #81c784);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #218838, #66bb6a);
+    transform: scale(1.05);
+}
+
+/* Buttons (General) */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px auto;
+    background: linear-gradient(to right, #007bff, #85d7ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #0056b3, #5fa3ff);
+    transform: scale(1.05);
+}
+
+/* Secondary Buttons */
+.btn-secondary {
+    background: linear-gradient(to right, #6c757d, #a9a9a9);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(to right, #5a6268, #808080);
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background: #f1f8e9;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* Footer Buttons Alignment */
+.footer-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-buttons .btn {
+    margin: 10px 5px;
+}

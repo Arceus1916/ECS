@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
 </head>
 <body>
     <div class="container">
         <h1>Transaction Complete</h1>
         <p>Total Active Time: {{ active_time }} seconds</p>
-        <p>Final Price: ${{ final_price }}</p>
+        <p>Final Price: Rs {{ final_price }}</p>
         <a href="{{ url_for('dashboard') }}" class="btn">Back to Dashboard</a>
     </div>
 </body>
